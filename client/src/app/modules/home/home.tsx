@@ -3,6 +3,11 @@ import './home.scss';
 import React, { useState } from 'react';
 import { useAppSelector } from 'app/config/store';
 import { MDBContainer, MDBRow, MDBCol, MDBTypography, MDBBtn } from 'mdb-react-ui-kit';
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+import WorkIcon from '@mui/icons-material/Work';
+import SchoolIcon from '@mui/icons-material/School';
+import StarIcon from '@mui/icons-material/Star';
 
 const images = {
   event1: 'Test',
@@ -19,72 +24,81 @@ export const Home = () => {
   const [showAlert, setShowAlert] = useState(false);
 
   return (
-    <div className="container-fluid d-flex align-items-center justify-content-center min-vh-100">
-      <div className="row w-100">
-        <div className="col-lg-12">
-          <div className="horizontal-timeline">
-            <ul className="list-inline items d-flex justify-content-center">
-              <li className="list-inline-item items-list text-center">
-                <div className="px-4">
-                  <div className="event-date badge bg-info">2 June</div>
-                  <h5 className="pt-2">Event One</h5>
-                  <p className="text-muted">It will be as simple as occidental in fact it will be Occidental Cambridge friend</p>
-                  <div>
-                    <a href="#" className="btn btn-primary btn-sm">
-                      Read more
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li className="list-inline-item items-list text-center">
-                <div className="px-4">
-                  <div className="event-date badge bg-success">5 June</div>
-                  <h5 className="pt-2">Event Two</h5>
-                  <p className="text-muted">Everyone realizes why a new common language one could refuse translators.</p>
-                  <div>
-                    <a
-                      href="#"
-                      className="btn btn-primary btn-sm"
-                      onMouseEnter={() => {
-                        setHoverImage(images.event1);
-                        setShowAlert(true); // Exibe o alerta
-                      }}
-                      onMouseLeave={() => setHoverImage(null)}
-                    >
-                      Read more
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li className="list-inline-item items-list text-center">
-                <div className="px-4">
-                  <div className="event-date badge bg-danger">7 June</div>
-                  <h5 className="pt-2">Event Three</h5>
-                  <p className="text-muted">If several languages coalesce the grammar of the resulting simple and regular</p>
-                  <div>
-                    <a href="#" className="btn btn-primary btn-sm">
-                      Read more
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li className="list-inline-item items-list text-center">
-                <div className="px-4">
-                  <div className="event-date badge bg-warning">8 June</div>
-                  <h5 className="pt-2">Event Four</h5>
-                  <p className="text-muted">Languages only differ in their pronunciation and their most common words.</p>
-                  <div>
-                    <a href="#" className="btn btn-primary btn-sm">
-                      Read more
-                    </a>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+    <VerticalTimeline>
+      <VerticalTimelineElement
+        className="vertical-timeline-element--work"
+        contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+        contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+        date="2011 - present"
+        iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+        icon={<WorkIcon />}
+      >
+        <h3 className="vertical-timeline-element-title">Creative Director</h3>
+        <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
+        <p>Creative Direction, User Experience, Visual Design, Project Management, Team Leading</p>
+      </VerticalTimelineElement>
+      <VerticalTimelineElement
+        className="vertical-timeline-element--work"
+        date="2010 - 2011"
+        iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+        icon={<WorkIcon />}
+      >
+        <h3 className="vertical-timeline-element-title">Art Director</h3>
+        <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
+        <p>Creative Direction, User Experience, Visual Design, SEO, Online Marketing</p>
+      </VerticalTimelineElement>
+      <VerticalTimelineElement
+        className="vertical-timeline-element--work"
+        date="2008 - 2010"
+        iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+        icon={<WorkIcon />}
+      >
+        <h3 className="vertical-timeline-element-title">Web Designer</h3>
+        <h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>
+        <p>User Experience, Visual Design</p>
+      </VerticalTimelineElement>
+      <VerticalTimelineElement
+        className="vertical-timeline-element--work"
+        date="2006 - 2008"
+        iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+        icon={<WorkIcon />}
+      >
+        <h3 className="vertical-timeline-element-title">Web Designer</h3>
+        <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
+        <p>User Experience, Visual Design</p>
+      </VerticalTimelineElement>
+      <VerticalTimelineElement
+        className="vertical-timeline-element--education"
+        date="April 2013"
+        iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
+        icon={<SchoolIcon />}
+      >
+        <h3 className="vertical-timeline-element-title">Content Marketing for Web, Mobile and Social Media</h3>
+        <h4 className="vertical-timeline-element-subtitle">Online Course</h4>
+        <p>Strategy, Social Media</p>
+      </VerticalTimelineElement>
+      <VerticalTimelineElement
+        className="vertical-timeline-element--education"
+        date="November 2012"
+        iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
+        icon={<SchoolIcon />}
+      >
+        <h3 className="vertical-timeline-element-title">Agile Development Scrum Master</h3>
+        <h4 className="vertical-timeline-element-subtitle">Certification</h4>
+        <p>Creative Direction, User Experience, Visual Design</p>
+      </VerticalTimelineElement>
+      <VerticalTimelineElement
+        className="vertical-timeline-element--education"
+        date="2002 - 2006"
+        iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
+        icon={<SchoolIcon />}
+      >
+        <h3 className="vertical-timeline-element-title">Bachelor of Science in Interactive Digital Media Visual Imaging</h3>
+        <h4 className="vertical-timeline-element-subtitle">Bachelor Degree</h4>
+        <p>Creative Direction, Visual Design</p>
+      </VerticalTimelineElement>
+      <VerticalTimelineElement iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }} icon={<StarIcon />} />
+    </VerticalTimeline>
   );
 };
 
