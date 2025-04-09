@@ -35,26 +35,28 @@ export const App = () => {
 
   const paddingTop = '60px';
   return (
-    <BrowserRouter basename={baseHref}>
-      <div className="app-container" style={{ paddingTop }}>
-        <ToastContainer position="top-left" className="toastify-container" toastClassName="toastify-toast" />
-        <ErrorBoundary>
-          <Header
-            isAuthenticated={isAuthenticated}
-            isAdmin={isAdmin}
-            ribbonEnv={ribbonEnv}
-            isInProduction={isInProduction}
-            isOpenAPIEnabled={isOpenAPIEnabled}
-          />
-        </ErrorBoundary>
-        <div className="container-fluid view-container " id="app-view-container">
+    <div className="app-container">
+      <BrowserRouter basename={baseHref}>
+        <div className="app-container" style={{ paddingTop }}>
+          <ToastContainer position="top-left" className="toastify-container" toastClassName="toastify-toast" />
           <ErrorBoundary>
-            <AppRoutes />
+            <Header
+              isAuthenticated={isAuthenticated}
+              isAdmin={isAdmin}
+              ribbonEnv={ribbonEnv}
+              isInProduction={isInProduction}
+              isOpenAPIEnabled={isOpenAPIEnabled}
+            />
           </ErrorBoundary>
-          <Footer />
+          <div className="container-fluid view-container " id="app-view-container">
+            <ErrorBoundary>
+              <AppRoutes />
+            </ErrorBoundary>
+            <Footer />
+          </div>
         </div>
-      </div>
-    </BrowserRouter>
+      </BrowserRouter>
+    </div>
   );
 };
 
