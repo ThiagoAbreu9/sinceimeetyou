@@ -97,7 +97,7 @@ module.exports = async options =>
         },
       ),
       new WebpackNotifierPlugin({
-        title: 'Since Imeet You',
+        title: 'Since I Meet You',
         contentImage: path.join(__dirname, 'logo-jhipster.png'),
       }),
     ].filter(Boolean),

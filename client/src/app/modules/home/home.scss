@@ -44,3 +44,30 @@ Main page styles
     top: -40px;
   }
 }
+.intro-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #f8f9fa, #e2e6ea);
+  animation: fadeIn 1s ease-in-out;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  p.lead {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
