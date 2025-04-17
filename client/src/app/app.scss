@@ -21,20 +21,32 @@ a {
     box-sizing: border-box;
   }
 }
-
 .app-container {
   box-sizing: border-box;
+
+  // Estilos de background aplicados diretamente aqui
+  background-image: url('./content/images/rachel_thiago.jpeg');
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: 250px;
+  min-height: 100vh;
+  position: relative;
+  background-color: transparent;
+
   .view-container {
     width: 100%;
     height: calc(100% - 10px);
     overflow-y: auto;
     overflow-x: hidden;
     padding: 1rem;
+
     .card {
       padding: 1rem;
     }
+
     .view-routes {
       height: 100%;
+
       > div {
         height: 100%;
       }
@@ -257,59 +269,11 @@ Generic styles
 make sure browsers use the pointer cursor for anchors, even with no href
 ========================================================================== */
 
-a:hover {
-  cursor: pointer;
-}
-
-.hand {
-  cursor: pointer;
-}
-
-button.anchor-btn {
-  background: none;
-  border: none;
-  padding: 0;
-  align-items: initial;
-  text-align: initial;
-  width: 100%;
-}
-
-a.anchor-btn:hover {
-  text-decoration: none;
-}
-
 /* ==========================================================================
 Metrics and Health styles
 ========================================================================== */
 
-#threadDump .popover,
-#healthCheck .popover {
-  top: inherit;
-  display: block;
-  font-size: 10px;
-  max-width: 1024px;
-}
-
-.thread-dump-modal-lock {
-  max-width: 450px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-#healthCheck .popover {
-  margin-left: -50px;
-}
-
-.health-details {
-  min-width: 400px;
-}
-
 /* bootstrap 3 input-group 100% width
 http://stackoverflow.com/questions/23436430/bootstrap-3-input-group-100-width */
-
-.width-min {
-  width: 1% !important;
-}
 
 /* jhipster-needle-scss-add-main JHipster will add new css style */

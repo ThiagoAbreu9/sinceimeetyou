@@ -69,12 +69,12 @@ const timelineData = [
     date: '11/04/2025',
     img: './content/images/rachel_oculos.jpeg',
     content:
-      'Você fica mt linda de óculos, essa é minha foto favorita... Vou terminar aqui mas não terminei essa TimeLine, é só pq vc me deu mais 10minutos pra terminar, enfim, queria te dizer: Obrigado por esse tempo e espero ter mts mais momentos e fotos com você pra eu por aqui, creio que não temos muitas fotos pq quando estamos juntos, o tempo passa diferente.',
+      'Você fica mt linda de óculos, essa é minha foto favorita... Vou terminar aqui mas não terminei essa TimeLine, é só pq vc me deu mais 10minutos pra terminar, enfim, queria te dizer: Obrigado por esse tempo e espero ter mts mais momentos e fotos com você pra eu por aqui, creio que não temos muitas fotos pq quando estamos juntos, o tempo passa diferente. Terá outras versões ainda com novas fotos e cards. <3',
   },
 ];
 
 export default function Timeline() {
-  const itemsPerPage = 5;
+  const itemsPerPage = 3;
   const [currentPage, setCurrentPage] = useState(0);
 
   // Ref para o container
@@ -111,6 +111,11 @@ export default function Timeline() {
       className="timeline-container d-flex justify-content-center flex-column py-5 w-100 position-relative"
       ref={timelineRef} // Ref no container
     >
+      <div className="back-to-home text-center mb-4">
+        <Button variant="outline-light" onClick={() => (window.location.href = '/')}>
+          Voltar para o Inicio
+        </Button>
+      </div>
       <div className="main-timeline-2">
         <AnimatePresence mode="wait">
           {currentItems.map((item, index) => (

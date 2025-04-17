@@ -29,7 +29,7 @@ export const Home = () => {
               <h1 className="mb-4">Since i meet you</h1>
               <p className="lead mb-4">
                 Essa é a nossa TimeLine ( Linha do Tempo ) desde que nos conhecemos... Não sei se é um presente ou uma declaração, fique a
-                vontade para sua interpretação também, fiz com muito carinho...
+                vontade para sua interpretação também, fiz com muito carinho... Ass.: Thiago Abreu
               </p>
               <Button variant="secondary" size="lg" onClick={handleStart} className="btn btn-success">
                 Start

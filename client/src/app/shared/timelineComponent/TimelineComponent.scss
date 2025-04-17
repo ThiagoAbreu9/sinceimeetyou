@@ -141,21 +141,48 @@
   }
 
   .timeline-container {
-    background-image: url(./content/images/rachel_thiago.jpeg) !important;
-    background-repeat: repeat;
-    background-position: 0 0;
-    background-size: 250px;
-    min-height: 100vh;
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(255, 255, 255, 0.5); /* Opacidade de 50% */
-      z-index: -1; /* Garante que a camada de fundo não interfira no conteúdo */
+    .btn {
+      font-size: 1.1rem;
+      padding: 0.6rem 1.8rem;
+      border-radius: 2rem;
+      font-weight: 600;
+      background-color: #6f42c1; // Cor principal
+      border: none;
+      color: white;
+      transition: all 0.3s ease;
+  
+      &:hover {
+        background-color: #5a32a3;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+  
+      &:disabled {
+        background-color: #ccc;
+        color: #666;
+        cursor: not-allowed;
+      }
+    }
+  
+    // Estilização do texto "Página X de Y"
+    span {
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 0.5rem 1rem;
+      border-radius: 1rem;
+      background: rgba(0, 0, 0, 0.5); // Fundo semi-transparente
+      color: white;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(3px);
+    }
+  
+    // Espaçamento no bloco da paginação
+    .pagination-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 2rem;
     }
   }
+  
