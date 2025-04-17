@@ -37,7 +37,7 @@ export const App = () => {
   return (
     <div className="app-container">
       <BrowserRouter basename={baseHref}>
-        <div className="app-container bg bg-success" style={{ paddingTop }}>
+        <div className="app-container" style={{ paddingTop }}>
           <ToastContainer position="top-left" className="toastify-container" toastClassName="toastify-toast" />
           <ErrorBoundary>
             <Header
