@@ -5,6 +5,8 @@
   "description": "Description for Since Imeet You",
   "license": "UNLICENSED",
   "scripts": {
+    "build:react": "react-scripts build",
+    "vercel-build": "cd src/main/webapp && npm install && npm run build:react",
     "build": "npm run webapp:prod --",
     "build-watch": "concurrently 'npm run webapp:build:dev -- --watch' npm:backend:start",
     "ci:frontend:test": "npm run webapp:build:$npm_package_config_default_environment && npm run test-ci",
