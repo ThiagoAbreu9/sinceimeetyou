@@ -25,15 +25,16 @@ a {
   box-sizing: border-box;
 
   // Estilos de background aplicados diretamente aqui
-  background-image: url('./content/images/rachel_thiago_background.png');
-  background-repeat: repeat;
-  background-position: 0 0;
-  background-size: 250px;
-  min-height: 100vh;
-  position: relative;
-  background-color: transparent;
 
   .view-container {
+    
+    background-image: url('./content/images/rachel_thiago_background.png');
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: 250px;
+    min-height: 100vh;
+    position: relative;
+    background-color: transparent;
     width: 100%;
     height: calc(100% - 10px);
     overflow-y: auto;
