@@ -6,6 +6,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "build:react": "react-scripts build",
+    "build:vercel": "webpack --config webpack/webpack.prod.js --progress=profile",
     "vercel-build": "cd src/main/webapp && npm install && npm run build:react",
     "build": "npm run webapp:prod --",
     "build-watch": "concurrently 'npm run webapp:build:dev -- --watch' npm:backend:start",
